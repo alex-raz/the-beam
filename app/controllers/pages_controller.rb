@@ -1,0 +1,16 @@
+class PagesController < ApplicationController
+  def home
+  end
+
+  def ambassador
+  end
+
+  def buy
+  end
+
+  def impressum
+  end
+
+  def solar_panel_art
+  end
+end

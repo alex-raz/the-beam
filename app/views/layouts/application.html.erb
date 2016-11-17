@@ -1,14 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <title>TheBeam</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+<head>
+  <title>Welcome to TheBeam</title>
+  <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-78504373-4', 'auto');
+   ga('send', 'pageview');
+  </script>
+</head>
+<body id="content" class="">
+  <div class="page-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <header>
+            <nav id="main-menu">
+              <ul class="inline">
+                <li><a href="/#about">About</a></li>
+                <li><%= link_to "Subscribe", buy_path %></li>
+                <li><a href="/#interviews">Interviews</a></li>
+                <li class="logo-place">
+                  <%= link_to root_path do %>
+                    <img src="/images/beam-logo.png">
+                  <% end %>
+                </li>
+                <li><a href="/#contact">Contact</a></li>
+                <li><a href="https://twitter.com/@TheBeamMagazine">Twitter<img class="social-logo" src="/images/twitter-grey.png"></a></li>
+                <li><a href="https://www.facebook.com/TheBeamMag">Facebook<img class="social-logo" src="/images/facebook-grey.png"></a></li>
+              </ul>
+            </nav>
+          </header>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="body">
+            <span>&copy; Copyright 2016 - The Beam by GridHub </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>

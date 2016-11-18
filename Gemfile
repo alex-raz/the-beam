@@ -36,6 +36,9 @@ gem 'fastimage' #  is used to extract the image dimensions
 gem 'image_processing' # includes some helpers for using ImageMagick
 gem 'shrine-memory' # In-memory storage for Shrine (for test env only)
 
+# Rails wrapper for https://github.com/basecamp/trix
+# "A rich text editor for everyday writing"
+gem 'trix'
 
 group :development do
   gem 'listen', '~> 3.0.5'

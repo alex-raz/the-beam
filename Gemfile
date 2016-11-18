@@ -27,6 +27,16 @@ gem 'administrate', '~> 0.3.0'
 # fix for missing dependency in the 'administrate' gem
 gem 'bourbon'
 
+# ..a toolkit for file attachments in Ruby applications
+gem 'shrine'
+
+# Shrine Dependencies
+gem 'mini_magick' # A ruby wrapper for ImageMagick or GraphicsMagick command line
+gem 'fastimage' #  is used to extract the image dimensions
+gem 'image_processing' # includes some helpers for using ImageMagick
+gem 'shrine-memory' # In-memory storage for Shrine (for test env only)
+
+
 group :development do
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

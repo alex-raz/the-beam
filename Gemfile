@@ -41,4 +41,7 @@ end
 group :test do
   # provides RSpec-compatible one-liners that test common Rails functionality
   gem 'shoulda-matchers', '~> 3.0'
+
+  # A library for setting up Ruby objects as test data
+  gem 'factory_girl_rails', '~> 4.0'
 end

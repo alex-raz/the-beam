@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe PagesController, type: :controller do
+  render_views
+
   describe "static pages" do
     specify "success response" do
       pages = [:home, :ambassador, :buy, :impressum, :solar_panel_art]

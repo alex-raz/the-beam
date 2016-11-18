@@ -36,6 +36,9 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
+
+  # Add a comment summarizing the current schema
+  gem 'annotate'
 end
 
 group :test do

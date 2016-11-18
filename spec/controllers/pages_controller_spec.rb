@@ -7,7 +7,7 @@ RSpec.describe PagesController, type: :controller do
     pages = [:home, :ambassador, :buy, :impressum, :solar_panel_art]
 
     pages.map do |page|
-      get page
+      process page, method: :get
 
       expect(response).to have_http_status(:success)
     end
@@ -17,7 +17,7 @@ RSpec.describe PagesController, type: :controller do
     it 'renders interviews' do
       interview = create :interview
 
-      get :home
+      process :home, method: :get
 
       expect(response.body).to include(
         "<h4>#{interview.interviewee_full_name}</h4>",

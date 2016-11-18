@@ -9,6 +9,7 @@
 #  read_more_link        :string
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
+#  image_data            :text
 #
 
 class Interview < ApplicationRecord

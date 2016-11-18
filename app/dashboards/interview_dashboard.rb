@@ -13,6 +13,7 @@ class InterviewDashboard < Administrate::BaseDashboard
     interviewee_full_name: Field::String,
     interviewee_synopsis: Field::String,
     read_more_link: Field::String,
+    image: ImageField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -25,6 +26,7 @@ class InterviewDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :content_preview,
+    :image,
     :interviewee_full_name,
     :interviewee_synopsis,
   ].freeze
@@ -34,6 +36,7 @@ class InterviewDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :content_preview,
+    :image,
     :interviewee_full_name,
     :interviewee_synopsis,
     :read_more_link,
@@ -46,6 +49,7 @@ class InterviewDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :content_preview,
+    :image,
     :interviewee_full_name,
     :interviewee_synopsis,
     :read_more_link,

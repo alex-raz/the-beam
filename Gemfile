@@ -55,6 +55,9 @@ group :development, :test do
 
   # Add a comment summarizing the current schema
   gem 'annotate'
+
+  # Mac OS X User Notifications for Guard
+  gem 'terminal-notifier-guard', require: false
 end
 
 group :test do

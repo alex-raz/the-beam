@@ -24,21 +24,19 @@ class InterviewDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :id,
-    :content_preview,
     :image,
     :interviewee_full_name,
-    :interviewee_synopsis,
+    :content_preview
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
-    :content_preview,
     :image,
     :interviewee_full_name,
     :interviewee_synopsis,
+    :content_preview,
     :read_more_link,
     :created_at,
     :updated_at,
@@ -48,11 +46,11 @@ class InterviewDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :content_preview,
     :image,
     :interviewee_full_name,
     :interviewee_synopsis,
-    :read_more_link,
+    :content_preview,
+    :read_more_link
   ].freeze
 
   # Overwrite this method to customize how interviews are displayed

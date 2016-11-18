@@ -21,6 +21,12 @@ gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 
+# A framework for creating flexible, powerful admin dashboards in Rails.
+gem 'administrate', '~> 0.3.0'
+
+# fix for missing dependency in the 'administrate' gem
+gem 'bourbon'
+
 group :development do
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

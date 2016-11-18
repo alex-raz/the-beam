@@ -9,7 +9,7 @@ class TestimonialDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    content: Field::Text,
+    content: TrixEditorField,
     reader_full_name: Field::String,
     reader_link: Field::String,
     created_at: Field::DateTime,

@@ -17,5 +17,6 @@ class Interview < ApplicationRecord
             :interviewee_full_name,
             :interviewee_synopsis,
             :read_more_link,
+            :image_data,
             presence: true
 end

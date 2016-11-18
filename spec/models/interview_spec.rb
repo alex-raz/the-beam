@@ -20,5 +20,6 @@ RSpec.describe Interview, type: :model do
     it { is_expected.to validate_presence_of(:interviewee_full_name) }
     it { is_expected.to validate_presence_of(:interviewee_synopsis) }
     it { is_expected.to validate_presence_of(:read_more_link) }
+    it { is_expected.to validate_presence_of(:image_data) }
   end
 end

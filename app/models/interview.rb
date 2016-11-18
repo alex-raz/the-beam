@@ -13,6 +13,8 @@
 #
 
 class Interview < ApplicationRecord
+  include InterviewImageUploader[:image]
+
   validates :content_preview,
             :interviewee_full_name,
             :interviewee_synopsis,

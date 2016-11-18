@@ -1,0 +1,3 @@
+title	size	address	phase	description	latitude	longitude	country_code	region_code	for_sale	yearly_revenue_in_eur	yearly_production_in_kw_h	built_in	mounted_on	price_in_eur	development_status	user_id	about_offer	connected_in_year	size_in_ha	source	elevation_in_meters	solar_radiation_ghi_a	electricity_yield_in_kwh_kwp_a	technology	number_of_wind_turbines	park_type	seo_title	seo_description	keywords	renewable_energy_park_companies	renewable_energy_park_purchasers
+Imported, sp	2		connected				DE													source						solar_park				c1; c2; c3	c1; c2
+Imported sp1	2		connected				US													source						wind_park				c1; c4; c5	c3; c4

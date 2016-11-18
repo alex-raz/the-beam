@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :interviews
+    resources :testimonials
 
     root to: 'interviews#index'
   end

@@ -26,4 +26,17 @@ RSpec.describe PagesController, type: :controller do
       )
     end
   end
+
+  describe 'GET #buy' do
+    it 'renders testimonials' do
+      testimonial = create :testimonial
+
+      process :buy, method: :get
+
+      expect(response.body).to include(
+        testimonial.content,
+        "<cite><a href=\"#{testimonial.reader_link}\">#{testimonial.reader_full_name}</a></cite>"
+      )
+    end
+  end
 end

@@ -7,6 +7,7 @@ class PagesController < ApplicationController
   end
 
   def buy
+    @testimonials = Testimonial.all
   end
 
   def impressum

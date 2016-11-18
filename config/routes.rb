@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :interviews
+
+    root to: 'interviews#index'
+  end
+
   root 'pages#home'
   get '/ambassador', to: 'pages#ambassador'
   get '/buy', to: 'pages#buy'

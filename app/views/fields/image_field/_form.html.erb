@@ -2,6 +2,7 @@
   <%= f.label field.attribute %>
 </div>
 <div class="field-unit__field">
+  <%= f.hidden_field field.attribute, value: f.object.cached_image_data %>
   <%= f.file_field field.attribute %>
   <br>
   <%- if f.object.image_data? %>

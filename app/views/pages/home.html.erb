@@ -1,2 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<a name="#interviews"></a>
+<section id="interviews">
+  <h3 class="header">Interviews</h3>
+  <div class="body">
+    <div class="row">
+      <%= render partial: "interviews/item", collection: @interviews, as: :interview %>
+    </div>
+  </div>
+</section>

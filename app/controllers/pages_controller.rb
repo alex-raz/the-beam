@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @interviews = Interview.all
   end
 
   def ambassador

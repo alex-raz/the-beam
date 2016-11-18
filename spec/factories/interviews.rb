@@ -18,5 +18,6 @@ FactoryGirl.define do
     interviewee_full_name 'John Doe'
     interviewee_synopsis 'true identity is unknown or must be withheld in a legal action'
     read_more_link 'http://example.com'
+    image File.open('spec/fixtures/300px.jpg')
   end
 end

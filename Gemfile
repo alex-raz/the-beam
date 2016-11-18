@@ -37,3 +37,8 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
 end
+
+group :test do
+  # provides RSpec-compatible one-liners that test common Rails functionality
+  gem 'shoulda-matchers', '~> 3.0'
+end

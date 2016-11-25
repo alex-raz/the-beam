@@ -40,6 +40,9 @@ gem 'shrine-memory' # In-memory storage for Shrine (for test env only)
 # "A rich text editor for everyday writing"
 gem 'trix'
 
+# Devise is a flexible authentication solution for Rails based on Warden.
+gem 'devise'
+
 group :development do
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

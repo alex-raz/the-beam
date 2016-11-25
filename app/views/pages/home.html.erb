@@ -1,9 +1,91 @@
-<a name="#interviews"></a>
+<a id="about"></a>
+<section id="subscribe">
+  <p class="white-circle">The Beam is your printed publication on renewable energy.</p>
+  <%= image_tag "beam-image.jpg", class: "img" %>
+  <%= link_to "Order The Beam now", buy_path, class: "btn btn-default btn-common btn-yellow" %>
+</section>
 <section id="interviews">
   <h3 class="header">Interviews</h3>
   <div class="body">
     <div class="row">
       <%= render partial: "interviews/item", collection: @interviews, as: :interview %>
     </div>
+  </div>
+</section>
+<section id="partners" class="logos">
+  <h3 class="header">Partners</h3>
+  <div class="body">
+    <div class="row">
+      <div class="logo col-xs-12 col-sm-offset-3 col-sm-3">
+        <%= link_to "http://cleantechnica.com", target: "_blank" do %>
+          <%= image_tag "cleantechnica-g.png", alt: "CleanTechnica" %>
+        <% end %>
+      </div>
+      <div class="logo col-xs-12 col-sm-3">
+        <%= link_to "https://gridhub.com", target: "_blank" do %>
+          <%= image_tag "gridhub-g.png", alt: "GridHub" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="supporters" class="logos">
+  <h3 class="header">Supporters</h3>
+  <div class="body">
+    <div class="row">
+      <div class="logo-single-line col-xs-12">
+        <%= link_to "#" do %>
+          <%= image_tag "supporters/rebalance.png", alt: "Rebalance" %>
+        <% end %>
+        <%= link_to "https://www.milkthesun.com", target: '_blank' do %>
+          <%= image_tag "supporters/milk-sun.png", alt: "Milk the Sun" %>
+        <% end %>
+        <%= link_to "https://gridhub.com/companies/company-mobisol", target: '_blank' do %>
+          <%= image_tag "supporters/mobisol.png", alt: "Mobisol" %>
+        <% end %>
+        <%= link_to "#" do %>
+          <%= image_tag "supporters/udabberi.png", alt: "Udabberi" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="editions" class="grey-bg">
+  <h3 class="header">Editions</h3>
+  <div class="body">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="image-cover">
+          <%= link_to buy_path, title: "Buy The Beam #1 now" do %>
+            <%= image_tag "the-beam-cover.png", alt: "The Beam magazine. First Edition." %>
+            <p class="caption">First Edition, April 2016</p>
+          <% end %>
+          </a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="image-cover">
+          <%= link_to buy_path, title: "Buy The Beam #2 now" do %>
+            <%= image_tag "the-beam-second-cover.jpg", alt: "The Beam magazine. Second Edition." %>
+            <p class="caption">Second Edition, September 2016</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id='contact' class="central-text">
+  <h3 class="header">Contact</h3>
+  <p class="body">
+    For questions on subscription or advertising packages, email us at
+     <%= mail_to "thebeam@gridhub.com" %>
+  </p>
+</section>
+<section class="central-text-2">
+  <div class="block">
+    <%= link_to "Become An Ambassador", ambassador_path, class: "btn btn-default btn-common btn-yellow" %>
+  </div>
+  <div class="block">
+    <%= link_to "Impressum", impressum_path %>
   </div>
 </section>

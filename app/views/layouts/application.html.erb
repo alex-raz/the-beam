@@ -5,6 +5,7 @@
   <%= csrf_meta_tags %>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= favicon_link_tag 'favicon.png', type: 'image/png' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <script>
@@ -29,12 +30,22 @@
                 <li><a href="/#interviews">Interviews</a></li>
                 <li class="logo-place">
                   <%= link_to root_path do %>
-                    <img src="/images/beam-logo.png">
+                    <%= image_tag 'beam-logo.png', alt: 'The Beam' %>
                   <% end %>
                 </li>
                 <li><a href="/#contact">Contact</a></li>
-                <li><a href="https://twitter.com/@TheBeamMagazine">Twitter<img class="social-logo" src="/images/twitter-grey.png"></a></li>
-                <li><a href="https://www.facebook.com/TheBeamMag">Facebook<img class="social-logo" src="/images/facebook-grey.png"></a></li>
+                <li>
+                  <%= link_to "https://twitter.com/@TheBeamMagazine" do %>
+                    Twitter
+                    <%= image_tag 'twitter-grey.png', class: 'social-logo' %>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to "https://www.facebook.com/TheBeamMag" do %>
+                    Facebook
+                    <%= image_tag 'facebook-grey.png', class: 'social-logo' %>
+                  <% end %>
+                </li>
               </ul>
             </nav>
           </header>

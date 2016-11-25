@@ -11,4 +11,8 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap.min
+ *= require bootstrap-theme.min
+ *= require font-awesome
+ *= require style-20160906
  */

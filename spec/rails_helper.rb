@@ -57,4 +57,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # "...Now you are ready to use the sign_in and sign_out methods on your controller tests"
+  config.include Devise::Test::ControllerHelpers, type: :controller
 end

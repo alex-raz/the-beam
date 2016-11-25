@@ -7,6 +7,10 @@ describe Admin::InterviewsController, type: :controller do
   let(:file) { File.open(File.join(Rails.root, '/spec/fixtures/300px.jpg')) }
   after { file.close }
 
+  # authenticate admin user before each action
+  let(:admin_user) { create :admin_user }
+  before { sign_in admin_user }
+
   describe 'ImageField' do
     it 'GET #new renders image uploading form' do
       process :new, method: :get

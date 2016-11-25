@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'Muli';
   font-weight: normal;
-  src: url('/fonts/muli/Muli.ttf');
+  src: font-url('muli/Muli.ttf');
 }
 
 @font-face {
   font-family: 'Muli';
   font-weight: bold;
-  src: url('/fonts/muli/Muli-Bold.ttf');
+  src: font-url('muli/Muli-Bold.ttf');
 }
 
 @font-face {
   font-family: 'Muli';
   font-weight: 100;
-  src: url('/fonts/muli/Muli-Light.ttf');
+  src: font-url('muli/Muli-Light.ttf');
 }
 
 $color-1: #231f20;

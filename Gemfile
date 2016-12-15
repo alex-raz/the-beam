@@ -54,6 +54,14 @@ group :development do
 
   # implements the rspec command for Spring
   gem 'spring-commands-rspec', group: :development
+
+  # deployment-related
+  gem 'capistrano', require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-faster-assets', require: false
+  gem 'capistrano3-puma', require: false
 end
 
 group :development, :test do

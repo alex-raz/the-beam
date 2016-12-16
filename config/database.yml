@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: the-beam_production
-  username: the-beam
-  password: <%= ENV['THE-BEAM_DATABASE_PASSWORD'] %>
+  username: <%= ENV['THE_BEAM_DATABASE_USERNAME'] %>
+  password: <%= ENV['THE_BEAM_DATABASE_PASSWORD'] %>

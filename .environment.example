@@ -1,1 +1,2 @@
 SECRET_KEY_BASE='short_string_for_simplicity'
+THE_BEAM_DATABASE_USERNAME='deploy'

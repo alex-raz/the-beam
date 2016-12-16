@@ -18,7 +18,10 @@
 
 public/uploads/
 
+# ignore local dotenv-related files
 .env
-
 .env.test
+.env.production
 
+# do not track server IP in git
+config/provision/production

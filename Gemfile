@@ -3,6 +3,10 @@ ruby '2.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+
+# Loads environment variables from `.env`.
+gem 'dotenv-rails'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -42,9 +46,6 @@ gem 'trix'
 
 # Devise is a flexible authentication solution for Rails based on Warden.
 gem 'devise'
-
-# Loads environment variables from `.env`.
-gem 'dotenv-rails'
 
 group :development do
   gem 'listen', '~> 3.0.5'

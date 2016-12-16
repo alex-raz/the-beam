@@ -1,3 +1,3 @@
-[![Build Status](https://semaphoreci.com/api/v1/alexeyrazuvaev/the-beam/branches/master/badge.svg)](https://semaphoreci.com/alexeyrazuvaev/the-beam)
+![codeship](https://codeship.com/projects/071d7300-a5d4-0134-92d2-463b4e974771/status?branch=master)
 
 [![Code Climate](https://codeclimate.com/github/alexeyrazuvaev/the-beam/badges/gpa.svg)](https://codeclimate.com/github/alexeyrazuvaev/the-beam)

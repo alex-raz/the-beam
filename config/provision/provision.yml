@@ -1,0 +1,31 @@
+---
+- hosts: all
+  gather_facts: false
+  remote_user: root
+
+  pre_tasks:
+    - name: create deploy user account
+      user: name={{ deploy_user }} shell=/bin/bash
+
+    - name: create .ssh/ dir for deploy user
+      file: path={{ home }}/.ssh state=directory mode=700
+
+    - name: copy authorized keys for deploy user
+      shell: 'cp /root/.ssh/authorized_keys {{ home }}/.ssh && chown -R {{ deploy_user }}:{{ deploy_user }} {{ home }}/.ssh'
+
+  roles:
+    - dependencies
+    - postgresql
+    - nginx
+    - { role: rvm_io.ruby,
+        tags: ruby,
+
+        rvm1_rubies: ['ruby-{{ ruby_version }}'],
+        rvm1_user: '{{ deploy_user }}',
+        rvm1_install_path: '{{ home }}/.rvm',
+        # "--autolibs=read-fail" is for "Use libs, fail if some are missing"
+        # we need this to:
+        # - ensure that all requirements were satisfied on previous steps
+        # - avoid 'sudo' in rvm installation
+        rvm1_install_flags: --auto-dotfiles  --user-install --autolibs=read-fail
+      }

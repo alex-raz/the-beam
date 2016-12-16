@@ -1,0 +1,25 @@
+---
+- name: install
+  apt: name={{ item }} state=present
+  with_items:
+    - postgresql
+    - postgresql-contrib
+    - libpq-dev
+
+- name: check user
+  shell: psql -U postgres -c "\copyright"
+  register: postgres_login
+  ignore_errors: yes
+
+- name: set auth type
+  template:
+    src=pg_hba.conf
+    dest=/etc/postgresql/9.4/main/pg_hba.conf
+    owner=postgres
+    group=postgres
+    mode=0644
+  when: postgres_login|failed
+
+- name: restart service
+  service: name=postgresql state=restarted
+  when: postgres_login|failed

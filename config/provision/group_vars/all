@@ -1,0 +1,5 @@
+app_name: the-beam
+ruby_version: 2.3.3
+deploy_user: deploy
+home: '/home/{{ deploy_user }}'
+deploy_directory: '{{ home }}/apps/{{ app_name }}'

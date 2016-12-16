@@ -30,8 +30,8 @@ namespace :deploy do
   task :check_revision do
     on roles(:app) do
       unless `git rev-parse HEAD` == `git rev-parse origin/#{fetch(:branch)}`
-        puts "WARNING: HEAD is not the same as origin/#{fetch(:branch)}"
-        puts 'Run `git push` to sync changes.'
+        puts "\n\e[0;31m WARNING: HEAD is not the same as origin/#{fetch(:branch)}\e[0m\n"
+        puts "\e[0;32m Run `git push` to sync changes.\e[0m"
         exit
       end
     end

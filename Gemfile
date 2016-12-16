@@ -3,6 +3,10 @@ ruby '2.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+
+# Loads environment variables from `.env`.
+gem 'dotenv-rails'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -45,7 +49,8 @@ gem 'devise'
 
 group :development do
   gem 'listen', '~> 3.0.5'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application running in the background.
+  # Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
@@ -54,6 +59,14 @@ group :development do
 
   # implements the rspec command for Spring
   gem 'spring-commands-rspec', group: :development
+
+  # deployment-related
+  gem 'capistrano', require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-faster-assets', require: false
+  gem 'capistrano3-puma', require: false
 end
 
 group :development, :test do

@@ -1,0 +1,37 @@
+---
+- name: apt update
+  apt: update_cache=yes
+
+- name: install
+  apt: name={{ item }} state=present
+  with_items:
+    - curl
+    - git
+    - imagemagick
+    - htop
+    - nodejs
+
+# install rvm requirements in order to avoid sudo commands in rvm installation
+- name: install rvm requirements
+  apt: name={{ item }} state=present
+  with_items:
+    - gawk
+    - g++
+    - gcc
+    - make
+    - libc6-dev
+    - libreadline6-dev
+    - zlib1g-dev
+    - libssl-dev
+    - libyaml-dev
+    - libsqlite3-dev
+    - sqlite3
+    - autoconf
+    - libgmp-dev
+    - libgdbm-dev
+    - libncurses5-dev
+    - automake
+    - libtool
+    - bison
+    - pkg-config
+    - libffi-dev

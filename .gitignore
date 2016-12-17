@@ -17,6 +17,7 @@
 .byebug_history
 
 public/uploads/
+public/assets/
 
 # ignore local dotenv-related files
 .env

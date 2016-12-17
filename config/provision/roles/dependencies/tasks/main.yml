@@ -10,6 +10,7 @@
     - imagemagick
     - htop
     - nodejs
+    - mosh
 
 # install rvm requirements in order to avoid sudo commands in rvm installation
 - name: install rvm requirements

@@ -83,3 +83,4 @@ production:
   database: the-beam_production
   username: <%= ENV['THE_BEAM_DATABASE_USERNAME'] %>
   password: <%= ENV['THE_BEAM_DATABASE_PASSWORD'] %>
+  host: <%= ENV['THE_BEAM_DATABASE_HOST'] %>

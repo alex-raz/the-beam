@@ -67,6 +67,7 @@ group :development do
   gem 'capistrano-rails', require: false
   gem 'capistrano-faster-assets', require: false
   gem 'capistrano3-puma', require: false
+  gem 'capistrano3-postgres', require: false
 end
 
 group :development, :test do

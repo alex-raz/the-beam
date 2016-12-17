@@ -24,6 +24,10 @@ set :puma_init_active_record, true
 set :bundle_path, -> { shared_path.join('vendor', 'bundle') }
 set :bundle_flags, '--deployment'
 
+# For capistrano3-postgres
+set :postgres_keep_local_dumps, 5
+set :postgres_backup_compression_level, 6
+
 # some tweaks
 namespace :deploy do
   desc 'Make sure local git is in sync with remote.'
@@ -57,7 +61,7 @@ namespace :deploy do
   desc 'Backup uploads/'
   task :copy_uploads_dir do
     on roles(:app) do
-      return if ENV['no_backup']
+      next if ENV['no_backup']
       run_locally { execute 'rm -rf public/uploads' }
       download!("#{shared_path}/public/uploads/store", 'public/uploads', recursive: true)
     end
@@ -68,3 +72,5 @@ namespace :deploy do
   before 'check:linked_files', :copy_env_file
   before :migrate, :createdb
 end
+
+before 'deploy:starting', 'postgres:backup:download' unless ENV['no_backup']

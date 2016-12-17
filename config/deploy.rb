@@ -54,6 +54,16 @@ namespace :deploy do
     end
   end
 
+  desc 'Backup uploads/'
+  task :copy_uploads_dir do
+    on roles(:app) do
+      return if ENV['no_backup']
+      run_locally { execute 'rm -rf public/uploads' }
+      download!("#{shared_path}/public/uploads/store", 'public/uploads', recursive: true)
+    end
+  end
+
+  before :starting, :copy_uploads_dir
   before :starting, :check_revision
   before 'check:linked_files', :copy_env_file
   before :migrate, :createdb

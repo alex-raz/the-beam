@@ -5,3 +5,5 @@
 //= require datetime_picker
 //= require_tree .
 //= require trix
+//= require Jcrop
+//= require Thumbnailer

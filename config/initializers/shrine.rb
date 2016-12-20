@@ -16,3 +16,4 @@ Shrine.plugin :store_dimensions
 Shrine.plugin :validation_helpers
 Shrine.plugin :versions
 Shrine.plugin :cached_attachment_data
+Shrine.plugin :delete_raw # delete processed files after uploading

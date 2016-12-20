@@ -485,7 +485,7 @@ ul.inline {
   .row-2 .interview .caption-l1 { min-height: 145px; }
   .row-3 .interview .caption-l1 { min-height: 145px; }
   .row-4 .interview .caption-l1 { min-height: 170px; }
-  .row-7 .interview .caption-l1 { min-height: 139px; }
+  .row-7 .interview .caption-l1 { min-height: 190px; }
 }
 
 @media (max-width: 1200px) {
@@ -493,8 +493,8 @@ ul.inline {
   .row-2 .interview .caption-l1 { min-height: 185px; }
   .row-3 .interview .caption-l1 { min-height: 167px; }
   .row-4 .interview .caption-l1 { min-height: 207px; }
-  .row-6 .interview .caption-l1 { min-height: 198px; }
-  .row-7 .interview .caption-l1 { min-height: 160px; }
+  .row-6 .interview .caption-l1 { min-height: 205px; }
+  .row-7 .interview .caption-l1 { min-height: 225px; }
 }
 
 @media (max-width: 991px) {
@@ -556,7 +556,10 @@ ul.inline {
   .row-1 .interview .caption-l1,
   .row-2 .interview .caption-l1,
   .row-3 .interview .caption-l1,
-  .row-4 .interview .caption-l1 {
+  .row-4 .interview .caption-l1,
+  .row-5 .interview .caption-l1,
+  .row-6 .interview .caption-l1,
+  .row-7 .interview .caption-l1 {
     min-height: 0;
   }
 

@@ -8,7 +8,7 @@ class InterviewImageUploader < Shrine
     )
     validate_min_width 150
     validate_min_height 150
-    validate_max_size 2.megabytes, message: 'is too large (max is 2 MB)'
+    validate_max_size 5.megabytes, message: 'is too large (max is 5 MB)'
     validate_min_size 4.kilobytes, message: 'is smaller than 5 KB' # to avoid size collisions
     validate_mime_type_inclusion ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
     validate_max_width 4000

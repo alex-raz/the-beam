@@ -68,6 +68,13 @@ group :development do
   gem 'capistrano-faster-assets', require: false
   gem 'capistrano3-puma', require: false
   gem 'capistrano3-postgres', require: false
+
+  # debugging-related
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
+  gem 'pry-doc'
+  gem 'awesome_print'
 end
 
 group :development, :test do

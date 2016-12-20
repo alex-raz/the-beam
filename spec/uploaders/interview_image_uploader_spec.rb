@@ -51,4 +51,26 @@ RSpec.describe InterviewImageUploader, type: :uploader do
       end
     end
   end
+
+  describe 'processing' do
+    let(:file) { File.open(File.join(Rails.root, '/spec/fixtures/300px.jpg')) }
+
+    describe 'store with resizing' do
+      it 'creates required versions' do
+        interview = create(:interview, image: file)
+        expect(interview.image.keys).to eq [:original, :x1200]
+      end
+    end
+
+    describe 'cropping' do
+      it 'creates "cropped" version' do
+        interview = create(:interview, image: file)
+        crop_data = %w(166 166 0 0) # [weight, height, offset_x, offset_y]
+
+        described_class.new(:cache).crop_image(interview, crop_data)
+
+        expect(interview.image.keys).to eq [:original, :x1200, :cropped]
+      end
+    end
+  end
 end

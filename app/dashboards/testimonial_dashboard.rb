@@ -23,8 +23,7 @@ class TestimonialDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :reader_full_name,
-    :reader_link,
-    :content
+    :reader_link
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

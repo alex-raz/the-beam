@@ -1,0 +1,17 @@
+<header class="header">
+  <h1 class="header__heading">Crop interview image</h1>
+</header>
+
+<div class='in-page-container'>
+  <%= image_tag resource.image[:x1200].url, id: 'cropbox' %>
+  <br>
+  <%= form_for([namespace, resource], html: { class: "form" }) do |f| %>
+    <% %w[x y w h].each do |attribute| %>
+      <%= f.hidden_field "crop_#{attribute}" %>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit "Crop" %>
+    </div>
+  <% end %>
+</div>

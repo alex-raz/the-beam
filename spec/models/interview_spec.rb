@@ -15,6 +15,13 @@
 require 'rails_helper'
 
 RSpec.describe Interview, type: :model do
+  describe 'db' do
+    it { is_expected.to respond_to :crop_x }
+    it { is_expected.to respond_to :crop_y }
+    it { is_expected.to respond_to :crop_w }
+    it { is_expected.to respond_to :crop_h }
+  end
+
   describe 'validations' do
     it { is_expected.to validate_presence_of(:content_preview) }
     it { is_expected.to validate_presence_of(:interviewee_full_name) }

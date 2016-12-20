@@ -6,8 +6,12 @@
   <%= f.file_field field.attribute %>
   <br>
   <%- if f.object.image_data? %>
-   <div>
-     <%= image_tag f.object.image.url, width: 40 %>
-   </div>
+    <div>
+      <% if f.object.image.try(:[], :cropped) %>
+        <%= image_tag f.object.image[:cropped].url, width: 50, class: 'round-img' %>
+      <% else %>
+        <%= image_tag f.object.image.url, width: 50 %>
+      <% end %>
+    </div>
   <%- end %>
 </div>

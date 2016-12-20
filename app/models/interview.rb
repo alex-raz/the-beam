@@ -13,6 +13,8 @@
 #
 
 class Interview < ApplicationRecord
+  attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
+
   include InterviewImageUploader[:image]
 
   validates :content_preview,

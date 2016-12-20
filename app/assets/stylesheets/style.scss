@@ -435,7 +435,6 @@ blockquote {
 }
 
 .btn {
-
   &.btn-common {
     padding: 20px 30px;
     font-weight: bold;
@@ -453,6 +452,20 @@ blockquote {
   &.btn-yellow {
     background-color: $orange-color;
     border-color: $orange-color;
+
+    &:link,
+    &:visited {
+      background-color: $orange-color;
+      border-color: $orange-color;
+    }
+
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: shade($orange-color, 3%);
+      border-color: shade($orange-color, 3%);
+    }
   }
 }
 

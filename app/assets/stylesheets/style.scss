@@ -12,6 +12,12 @@
 
 @font-face {
   font-family: 'Muli';
+  font-weight: 500;
+  src: url('/fonts/muli/Muli-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Muli';
   font-weight: 100;
   src: font-url('muli/Muli-Light.ttf');
 }
@@ -21,10 +27,14 @@ $color-2: #cdcdce;
 
 $blue-color: #337ab7;
 $white-color: #fff;
+$grey-color: #eee;
 $orange-color: #fbbd12;
+$pink-color: #eb5463;
 
 $footer-color: #9d9b9c;
 
+$screen-lg: 1200px;
+$screen-md: 992px;
 
 html,
 body {
@@ -57,13 +67,25 @@ footer .body {
   font-weight: 100;
 }
 
+@mixin link-color($color) {
+  &,
+  &:hover,
+  &:active,
+  &:visited,
+  &:link {
+    color: $color;
+  }
+}
+
+a {
+  @include link-color($color-1);
+}
+
 a,
 a:hover,
 a:active,
 a:visited,
 a:link {
-  color: $color-1;
-
   .default-link & {
     color: $blue-color;
   }
@@ -257,11 +279,78 @@ blockquote {
   a { font-weight: bold; }
 }
 
-
 .magazines {
+  background-color: $grey-color;
 
   .body { margin-top: 30px; }
-  .buy-item { margin-bottom: 20px; }
+}
+
+.magazines__table {
+  display: table;
+  width: 100%;
+}
+
+.magazines__text {
+  display: table-cell;
+  width: 50%;
+  padding: 35px 40px 40px;
+  font-size: 2em;
+  line-height: 1.2;
+  color: $pink-color;
+
+  @media (max-width: $screen-lg) {
+    padding-right: 0;
+  }
+}
+
+.magazines__link {
+  @include link-color($pink-color);
+
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.magazines__image-container {
+  display: table-cell;
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+
+  img {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .magazines__table {
+    display: block;
+    padding-bottom: 35px;
+  }
+
+  .magazines__text {
+    display: block;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    p {
+      margin-bottom: 5px;
+    }
+  }
+
+  .magazines__link {
+    margin-top: 20px;
+  }
+
+  .magazines__image-container {
+    display: block;
+    width: 100%;
+  }
 }
 
 .solar-panel .central-text .body {

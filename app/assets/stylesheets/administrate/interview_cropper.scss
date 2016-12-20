@@ -1,2 +1,21 @@
+.in-page-container {
+  padding: 1.5em;
+}
+
 .round-img { border-radius: 50% }
 
+.jcrop-thumb {
+  top: -20px;
+  right: -20px;
+  border: 1px black solid;
+  border-radius: 50%;
+}
+
+button.jcrop-box {
+  &:hover, &:active, &:focus {
+    background: none;
+    outline: none;
+  }
+  border-radius: 50%;
+  box-shadow: 1px 1px 26px #000000;
+}

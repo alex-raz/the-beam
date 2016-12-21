@@ -29,14 +29,6 @@ a:link {
   }
 }
 
-blockquote {
-  border: 0;
-
-  cite { display: block; }
-}
-
-.grey-bg { background-color: $color-2; }
-
 .inline {
   margin: 0;
   padding: 0;
@@ -185,6 +177,7 @@ blockquote {
 
 .editions {
   padding: 0 0 30px 0;
+  background-color: $color-2;
 }
 
 .image-cover {
@@ -311,9 +304,11 @@ blockquote {
   }
 
   blockquote {
+    border: 0;
     font-weight: bold;
 
     cite {
+      display: block;
       margin-top: 10px;
       font-weight: normal;
     }

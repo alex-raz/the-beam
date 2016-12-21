@@ -1,70 +1,9 @@
-@font-face {
-  font-family: "Muli";
-  font-weight: normal;
-  src: font-url("muli/Muli.ttf");
-}
 
-@font-face {
-  font-family: "Muli";
-  font-weight: bold;
-  src: font-url("muli/Muli-Bold.ttf");
-}
+@import "fonts";
+@import "variables";
+@import "common";
 
-@font-face {
-  font-family: "Muli";
-  font-weight: 500;
-  src: url("/fonts/muli/Muli-SemiBold.ttf");
-}
-
-@font-face {
-  font-family: "Muli";
-  font-weight: 100;
-  src: font-url("muli/Muli-Light.ttf");
-}
-
-$color-1: #231f20;
-$color-2: #cdcdce;
-
-$blue-color: #337ab7;
-$white-color: #fff;
-$grey-color: #eee;
-$orange-color: #fbbd12;
-$pink-color: #eb5463;
-
-$footer-color: #9d9b9c;
-
-$screen-lg: 1200px;
-$screen-md: 992px;
-
-html,
-body {
-  height: 100%;
-}
-
-.page-wrap {
-  min-height: 100%;
-  margin-bottom: -41px;
-
-  &::after {
-    display: block;
-    height: 41px;
-    content: "";
-  }
-}
-
-body {
-  color: $color-1;
-  font-family: 'Muli', Arial, Helvetica, sans-serif;
-  font-size: 15px;
-}
-
-footer .body {
-  padding: 10px 0;
-  background-color: $color-1;
-  color: $footer-color;
-  font-weight: 100;
-  text-align: center;
-}
+@import "footer";
 
 @mixin link-color($color) {
   &,
@@ -87,10 +26,6 @@ a:visited,
 a:link {
   .default-link & {
     color: $blue-color;
-  }
-
-  footer .body & {
-    color: $footer-color;
   }
 }
 
@@ -568,9 +503,5 @@ blockquote {
 @media (max-width: 767px) {
   .ambassador .text {
     margin-top: 30px;
-  }
-
-  footer .container {
-    padding: 0;
   }
 }

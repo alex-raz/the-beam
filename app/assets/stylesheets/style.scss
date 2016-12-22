@@ -3,20 +3,25 @@
 @import "fonts";
 @import "mixin";
 @import "common";
+@import "button";
 @import "logo";
 
 @import "menu";
 @import "footer";
-@import "button";
+
 @import "editions";
 @import "subscribe";
 @import "contact";
 @import "partners";
 @import "supporters";
+@import "external_links";
+
 @import "ambassador";
 @import "impressum";
+
 @import "magazines";
 @import "testimonial";
+
 @import "solar_about";
 @import "solar_logos";
 
@@ -68,19 +73,6 @@
       font-weight: bold;
     }
   }
-}
-
-.central-text-2 {
-  margin: 0;
-  padding: 0;
-  font-weight: 100;
-  text-align: center;
-
-  .block {
-    margin-bottom: 70px;
-  }
-
-  a { font-weight: bold; }
 }
 
 .header {

@@ -77,14 +77,14 @@
   <h3 class="contact__header">Contact</h3>
   <p class="contact__body">
     For questions on subscription or advertising packages, email us at
-     <%= mail_to "thebeam@gridhub.com", "thebeam@gridhub.com", class: 'contact__link' %>
+     <%= mail_to "thebeam@gridhub.com", "thebeam@gridhub.com", class: "contact__link" %>
   </p>
 </section>
-<section class="central-text-2">
-  <div class="block">
-    <%= link_to "Become An Ambassador", ambassador_path, class: "btn btn--yellow" %>
+<section class="external-links">
+  <div class="external-links__block">
+    <%= link_to "Become An Ambassador", ambassador_path, class: "btn btn--yellow external-links__link" %>
   </div>
-  <div class="block">
-    <%= link_to "Impressum", impressum_path %>
+  <div class="external-links__block">
+    <%= link_to "Impressum", impressum_path, class: "external-links__link" %>
   </div>
 </section>

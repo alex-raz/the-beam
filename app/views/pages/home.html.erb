@@ -55,29 +55,29 @@
   <h3 class="editions__header">Editions</h3>
   <div class="row">
     <div class="col-xs-12 col-sm-6">
-      <div class="edition__cover">
+      <div class="editions__cover">
         <%= link_to buy_path, title: "Buy The Beam #1 now" do %>
-          <%= image_tag "the-beam-cover.png", alt: "The Beam magazine. First Edition.", class: "edition__cover-img" %>
-          <p class="edition__cover-caption">First Edition, April 2016</p>
+          <%= image_tag "the-beam-cover.png", alt: "The Beam magazine. First Edition.", class: "editions__cover-img" %>
+          <p class="editions__cover-caption">First Edition, April 2016</p>
         <% end %>
         </a>
       </div>
     </div>
     <div class="col-xs-12 col-sm-6">
-      <div class="edition__cover">
+      <div class="editions__cover">
         <%= link_to buy_path, title: "Buy The Beam #2 now" do %>
-          <%= image_tag "the-beam-second-cover.jpg", alt: "The Beam magazine. Second Edition.", class: "edition__cover-img" %>
-          <p class="edition__cover-caption">Second Edition, September 2016</p>
+          <%= image_tag "the-beam-second-cover.jpg", alt: "The Beam magazine. Second Edition.", class: "editions__cover-img" %>
+          <p class="editions__cover-caption">Second Edition, September 2016</p>
         <% end %>
       </div>
     </div>
   </div>
 </section>
-<section id="contact" class="central-text">
-  <h3 class="header">Contact</h3>
-  <p class="body">
+<section id="contact" class="contact">
+  <h3 class="contact__header">Contact</h3>
+  <p class="contact__body">
     For questions on subscription or advertising packages, email us at
-     <%= mail_to "thebeam@gridhub.com" %>
+     <%= mail_to "thebeam@gridhub.com", "thebeam@gridhub.com", class: 'contact__link' %>
   </p>
 </section>
 <section class="central-text-2">

@@ -9,10 +9,12 @@
 @import "button";
 @import "editions";
 @import "subscribe";
+@import "contact";
 @import "ambassador";
 @import "impressum";
 @import "magazines";
 @import "testimonial";
+@import "solar_about";
 
 a {
   @include link-color($color-1);
@@ -98,15 +100,6 @@ a {
   padding: 90px 0 60px 0;
 }
 
-.central-text .body {
-  margin: 0;
-  padding: 70px 0;
-  font-weight: 100;
-  text-align: center;
-
-  a { font-weight: bold; }
-}
-
 .central-text-2 {
   margin: 0;
   padding: 0;
@@ -118,14 +111,6 @@ a {
   }
 
   a { font-weight: bold; }
-}
-
-.solar-panel .central-text .body {
-  padding: 30px 0;
-}
-
-.big-image .image {
-  width: 100%;
 }
 
 .header {

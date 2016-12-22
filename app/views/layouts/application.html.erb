@@ -25,26 +25,26 @@
       <div class="row">
         <div class="col-xs-12">
           <header>
-            <nav class="main-menu">
-              <ul class="inline">
-                <li><a href="/#about">About</a></li>
-                <li><%= link_to "Subscribe", buy_path %></li>
-                <li><a href="/#interviews">Interviews</a></li>
-                <li class="logo-place">
+            <nav class="menu">
+              <ul class="menu__row">
+                <li class="menu__item"><a href="/#about">About</a></li>
+                <li class="menu__item"><%= link_to "Subscribe", buy_path %></li>
+                <li class="menu__item"><a href="/#interviews">Interviews</a></li>
+                <li class="menu__item menu_item--logo">
                   <%= link_to root_path do %>
-                    <%= image_tag 'beam-logo.png', alt: 'The Beam' %>
+                    <%= image_tag 'beam-logo.png', alt: 'The Beam', class: 'menu__logo' %>
                   <% end %>
                 </li>
-                <li><a href="/#contact">Contact</a></li>
-                <li>
+                <li class="menu__item"><a href="/#contact">Contact</a></li>
+                <li class="menu__item">
                   <%= link_to "Solarpanelart", solar_panel_art_path %>
                 </li>
-                <li>
+                <li class="menu__item">
                   <%= link_to "https://twitter.com/@TheBeamMagazine" do %>
-                    <%= image_tag "twitter-grey.png", class: "social-logo" %>
+                    <%= image_tag "twitter-grey.png", class: "menu__social" %>
                   <% end %>
                   <%= link_to "https://www.facebook.com/TheBeamMag" do %>
-                    <%= image_tag "facebook-grey.png", class: "social-logo" %>
+                    <%= image_tag "facebook-grey.png", class: "menu__social" %>
                   <% end %>
                 </li>
               </ul>

@@ -3,6 +3,7 @@
 @import "variables";
 @import "common";
 
+@import "menu";
 @import "footer";
 
 @mixin link-color($color) {
@@ -27,53 +28,6 @@ a:link {
   .default-link & {
     color: $blue-color;
   }
-}
-
-.inline {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-
-  li { display: inline-block; }
-}
-
-.main-menu {
-  position: relative;
-  height: 166px;
-  text-align: center;
-  vertical-align: middle;
-
-  ul {
-    height: 166px;
-    padding: 50px 0;
-    vertical-align: middle;
-  }
-
-  li {
-    width: 13%;
-    text-align: center;
-
-    &.logo-place {
-      width: 18%;
-
-      img {
-        width: 100%;
-        max-width: 150px;
-      }
-    }
-
-    .social-logo {
-      display: inline-block;
-      position: relative;
-      top: -2px;
-      margin-left: 5px;
-    }
-  }
-}
-
-.social-logo {
-  width: 16px;
-  height: 16px;
 }
 
 .subscribe {
@@ -426,27 +380,6 @@ a:link {
 }
 
 @media (max-width: 991px) {
-  .main-menu {
-    position: relative;
-    height: auto;
-    text-align: center;
-    vertical-align: middle;
-
-    ul {
-      height: auto;
-      padding: 20px 0;
-      vertical-align: middle;
-    }
-
-    li,
-    li.logo-place {
-      width: 100%;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      text-align: center;
-    }
-  }
-
   .subscribe .white-circle {
     position: static;
     top: auto;
@@ -487,11 +420,6 @@ a:link {
   .row-6 .interview .caption-l1,
   .row-7 .interview .caption-l1 {
     min-height: 0;
-  }
-
-  .inline li {
-    display: block;
-    width: 100%;
   }
 }
 

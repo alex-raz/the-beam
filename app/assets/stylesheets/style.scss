@@ -9,6 +9,7 @@
 @import "button";
 @import "editions";
 @import "subscribe";
+@import "ambassador";
 
 @mixin link-color($color) {
   &,
@@ -236,21 +237,6 @@ a:link {
   }
 }
 
-.ambassador {
-  .header { text-align: left; }
-
-  .body {
-    margin-top: 50px;
-    margin-bottom: 100px;
-  }
-
-  .text h4 {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
-}
-
 .impressum {
   h4 {
     margin: 0;
@@ -319,11 +305,5 @@ a:link {
   .row-6 .interview .caption-l1,
   .row-7 .interview .caption-l1 {
     min-height: 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .ambassador .text {
-    margin-top: 30px;
   }
 }

@@ -1,0 +1,28 @@
+
+.ambassador__header {
+  @extend %header;
+  text-align: left;
+}
+
+.ambassador__body {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.ambassador__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.ambassador__text-header {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .ambassador__text {
+    margin-top: 30px;
+  }
+}

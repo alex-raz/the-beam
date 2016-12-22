@@ -1,11 +1,13 @@
 
-@import "fonts";
 @import "variables";
+@import "fonts";
+@import "mixin";
 @import "common";
 
 @import "menu";
 @import "footer";
 @import "button";
+@import "editions";
 
 @mixin link-color($color) {
   &,
@@ -128,24 +130,6 @@ a:link {
 
 .solar-panel .logos .body {
   padding: 90px 0 60px 0;
-}
-
-.editions {
-  padding: 0 0 30px 0;
-  background-color: $color-2;
-}
-
-.image-cover {
-  text-align: center;
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .caption {
-    font-weight: bold;
-  }
 }
 
 .central-text .body {
@@ -306,12 +290,7 @@ a:link {
 }
 
 .header {
-  margin: 0;
-  padding: 30px 0 0 0;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
+  @extend %header;
 }
 
 .white-circle {

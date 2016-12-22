@@ -6,22 +6,22 @@
 @import "button";
 @import "logo";
 
-@import "menu";
-@import "footer";
+@import "layout/menu";
+@import "layout/footer";
 
-@import "editions";
-@import "subscribe";
-@import "contact";
-@import "partners";
-@import "supporters";
-@import "external_links";
-@import "interviews";
+@import "main/editions";
+@import "main/subscribe";
+@import "main/contact";
+@import "main/partners";
+@import "main/supporters";
+@import "main/external_links";
+@import "main/interviews";
 
-@import "ambassador";
-@import "impressum";
+@import "pages/ambassador";
+@import "pages/impressum";
 
-@import "magazines";
-@import "testimonial";
+@import "buy/magazines";
+@import "buy/testimonial";
 
-@import "solar_about";
-@import "solar_logos";
+@import "solar_panel/solar_about";
+@import "solar_panel/solar_logos";

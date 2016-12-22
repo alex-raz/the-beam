@@ -1,0 +1,41 @@
+
+.subscribe {
+  position: relative;
+}
+
+.subscribe__img {
+  width: 100%;
+}
+
+.subscribe__btn {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -133px;
+}
+
+.subscribe__cicle {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 210px;
+  height: 210px;
+  padding: 35px 15px 25px 45px;
+  border-radius: 50%;
+  background-color: $white-color;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 991px) {
+  .subscribe__cicle {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: inherit;
+    text-align: center;
+  }
+}

@@ -1,0 +1,26 @@
+
+.btn--yellow {
+  padding: 20px 30px;
+  border-color: $orange-color;
+  background-color: $orange-color;
+  background-image: none;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: none;
+  text-transform: uppercase;
+
+  &:link,
+  &:visited {
+    border-color: $orange-color;
+    background-color: $orange-color;
+  }
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: shade($orange-color, 3%);
+    background-color: shade($orange-color, 3%);
+  }
+}

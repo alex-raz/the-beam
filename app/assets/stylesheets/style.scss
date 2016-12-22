@@ -10,6 +10,7 @@
 @import "editions";
 @import "subscribe";
 @import "ambassador";
+@import "impressum";
 
 @mixin link-color($color) {
   &,
@@ -234,22 +235,6 @@ a:link {
       margin-top: 10px;
       font-weight: normal;
     }
-  }
-}
-
-.impressum {
-  h4 {
-    margin: 0;
-    font-weight: bold;
-
-    + p {
-      margin-top: 0;
-    }
-  }
-
-  p {
-    margin-top: 40px;
-    margin-bottom: 40px;
   }
 }
 

@@ -1,0 +1,19 @@
+
+$impressum-marging: 40px;
+
+.impressum {
+  margin-bottom: $impressum-marging;
+
+  &__header {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  &__block + &__block {
+    margin-top: $impressum-marging;
+  }
+
+  &__par + &__par {
+    margin-top: $impressum-marging;
+  }
+}

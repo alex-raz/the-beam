@@ -3,6 +3,7 @@
 @import "fonts";
 @import "mixin";
 @import "common";
+@import "logo";
 
 @import "menu";
 @import "footer";
@@ -10,15 +11,14 @@
 @import "editions";
 @import "subscribe";
 @import "contact";
+@import "partners";
+@import "supporters";
 @import "ambassador";
 @import "impressum";
 @import "magazines";
 @import "testimonial";
 @import "solar_about";
-
-a {
-  @include link-color($color-1);
-}
+@import "solar_logos";
 
 .interviews .body {
   padding: 60px 30px 30px 30px;
@@ -68,36 +68,6 @@ a {
       font-weight: bold;
     }
   }
-}
-
-.logos {
-  .body {
-    padding: 30px 0;
-  }
-
-  .logo {
-    padding-bottom: 30px;
-    text-align: center;
-
-    img { height: 50px; }
-
-    p.descr { margin-top: 20px; }
-  }
-}
-
-.logo-single-line {
-  padding-bottom: 30px;
-  text-align: center;
-
-  a {
-    display: inline-block;
-    margin: 0 30px 30px 30px;
-    vertical-align: middle;
-  }
-}
-
-.solar-panel .logos .body {
-  padding: 90px 0 60px 0;
 }
 
 .central-text-2 {

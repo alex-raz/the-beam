@@ -20,3 +20,7 @@ body {
   font-family: 'Muli', Arial, Helvetica, sans-serif;
   font-size: 15px;
 }
+
+a {
+  @include link-color($color-1);
+}

@@ -13,38 +13,38 @@
     </div>
   </div>
 </section>
-<section class="partners logos">
-  <h3 class="header">Partners</h3>
-  <div class="body">
+<section class="partners">
+  <h3 class="partners__header">Partners</h3>
+  <div class="partners__body">
     <div class="row">
       <div class="logo col-xs-12 col-sm-offset-3 col-sm-3">
         <%= link_to "http://cleantechnica.com", target: "_blank" do %>
-          <%= image_tag "cleantechnica-g.png", alt: "CleanTechnica" %>
+          <%= image_tag "cleantechnica-g.png", alt: "CleanTechnica", class: "logo__img" %>
         <% end %>
       </div>
       <div class="logo col-xs-12 col-sm-3">
         <%= link_to "https://gridhub.com", target: "_blank" do %>
-          <%= image_tag "gridhub-g.png", alt: "GridHub" %>
+          <%= image_tag "gridhub-g.png", alt: "GridHub", class: "logo__img" %>
         <% end %>
       </div>
     </div>
   </div>
 </section>
-<section class="supporters logos">
-  <h3 class="header">Supporters</h3>
-  <div class="body">
+<section class="supporters">
+  <h3 class="supporters__header">Supporters</h3>
+  <div class="supporters__body">
     <div class="row">
-      <div class="logo-single-line col-xs-12">
-        <%= link_to "#" do %>
+      <div class="supporters__logos col-xs-12">
+        <%= link_to "#", class: "supporters__link" do %>
           <%= image_tag "supporters/rebalance.png", alt: "Rebalance" %>
         <% end %>
-        <%= link_to "https://www.milkthesun.com", target: '_blank' do %>
+        <%= link_to "https://www.milkthesun.com", target: "_blank", class: "supporters__link" do %>
           <%= image_tag "supporters/milk-sun.png", alt: "Milk the Sun" %>
         <% end %>
-        <%= link_to "https://gridhub.com/companies/company-mobisol", target: '_blank' do %>
+        <%= link_to "https://gridhub.com/companies/company-mobisol", target: "_blank", class: "supporters__link" do %>
           <%= image_tag "supporters/mobisol.png", alt: "Mobisol" %>
         <% end %>
-        <%= link_to "#" do %>
+        <%= link_to "#", class: "supporters__link" do %>
           <%= image_tag "supporters/udabberi.png", alt: "Udabberi" %>
         <% end %>
       </div>

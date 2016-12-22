@@ -11,6 +11,7 @@
 @import "subscribe";
 @import "ambassador";
 @import "impressum";
+@import "magazines";
 
 @mixin link-color($color) {
   &,
@@ -136,79 +137,6 @@ a:link {
   }
 
   a { font-weight: bold; }
-}
-
-.magazines {
-  background-color: $grey-color;
-
-  .body {
-    padding-top: 30px;
-    padding-bottom: 40px;
-  }
-}
-
-.magazines__wrapper {
-  display: block;
-  text-align: center;
-
-  &,
-  &:hover,
-  &:active,
-  &:visited,
-  &:link {
-    text-decoration: none;
-  }
-}
-
-.magazines__image-container {
-  img {
-    width: 100%;
-    max-width: 400px;
-  }
-}
-
-.magazines__text {
-  color: $pink-color;
-  font-size: 2em;
-  line-height: 1.2;
-}
-
-.magazines__text-upper,
-.magazines__like_link {
-  font-weight: bold;
-}
-
-.magazines__like_link {
-  text-decoration: underline;
-}
-
-@media (max-width: $screen-md) {
-  .magazines__table {
-    display: block;
-    padding-bottom: 35px;
-  }
-
-  .magazines__text {
-    display: block;
-    width: 100%;
-    padding-right: 20px;
-    padding-left: 20px;
-    font-size: 1.5em;
-    text-align: center;
-
-    p {
-      margin-bottom: 5px;
-    }
-  }
-
-  .magazines__link {
-    margin-top: 20px;
-  }
-
-  .magazines__image-container {
-    display: block;
-    width: 100%;
-  }
 }
 
 .solar-panel .central-text .body {

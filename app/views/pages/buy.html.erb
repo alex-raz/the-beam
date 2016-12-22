@@ -1,24 +1,22 @@
 <section class="magazines">
-  <h3 class="header">Subscribe Now</h3>
-  <div class="body">
+  <h3 class="magazines__header">Subscribe Now</h3>
+  <div class="magazines__body">
     <div class="row">
       <div class="col-xs-12">
         <%= link_to "https://the-beam-magazine.myshopify.com/products/subscribe-now", class: 'magazines__wrapper', target: "_blank" do %>
-          <div class="magazines__image-container">
-            <%= image_tag "buy/image.png", alt: "#buildthebeam" %>
+          <div class="magazines__image-wr">
+            <%= image_tag "buy/image.png", alt: "#buildthebeam", class: "magazines__image" %>
           </div>
-          <div class="magazines__text">
-            <p class="magazines__text-upper">
-              Don't let the energy transition leave you behind.
-            </p>
-            <p>
-              Build The Beam with us
-              for only 20 euros.
-              <br>
-              #buildthebeam
-            </p>
-            <span class="magazines__like_link">Subscribe now</span>
-          </div>
+          <p class="magazines__txt">
+            Don't let the energy transition leave you behind.
+          </p>
+          <p class="magazines__txt magazines__txt--n">
+            Build The Beam with us
+            for only 20 euros.
+            <br>
+            #buildthebeam
+          </p>
+          <p class="magazines__txt magazines__txt--sub">Subscribe now</p>
         <% end %>
       </div>
     </div>

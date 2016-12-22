@@ -1,6 +1,6 @@
 module ApplicationHelper
   def reader_cite(testimonial)
-    return testimonial.reader_full_name unless testimonial.reader_link
+    return testimonial.reader_full_name unless testimonial.reader_link&.present?
 
     link_to(testimonial.reader_full_name, testimonial.reader_link)
   end

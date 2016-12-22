@@ -1,0 +1,31 @@
+
+.testimonial {
+  a {
+    @include link-color($blue-color);
+  }
+
+  &__header {
+    @extend %header;
+  }
+
+  &__body {
+    margin-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  &__item {
+    padding: 0 5%;
+    text-align: center;
+  }
+
+  &__quote {
+    border: 0;
+    font-weight: bold;
+  }
+
+  &__cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: normal;
+  }
+}

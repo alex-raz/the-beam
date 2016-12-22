@@ -7,3 +7,13 @@
   text-align: center;
   text-transform: uppercase;
 }
+
+@mixin link-color($color) {
+  &,
+  &:hover,
+  &:active,
+  &:visited,
+  &:link {
+    color: $color;
+  }
+}

@@ -11,7 +11,6 @@
 
 .interview {
   margin-bottom: 20px;
-  padding: 4px;
   text-align: left;
 
   &__inner {
@@ -21,6 +20,10 @@
 
   &__header {
     font-weight: bold;
+  }
+
+  &__body {
+    margin-bottom: 10px;
   }
 
   &__img {

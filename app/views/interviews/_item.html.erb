@@ -2,7 +2,7 @@
   <div class="interview">
     <%= image_tag interview.image_url(:cropped), class: "interview__img" %>
     <div class="interview__inner">
-      <div class="caption-l1">
+      <div class="interview__body">
         <h4 class="interview__header"><%= interview.interviewee_full_name %></h4>
         <p class="interview__synopsis"><%= interview.interviewee_synopsis %></p>
         <p class="interview__preview"><%= interview.content_preview %></p>

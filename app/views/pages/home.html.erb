@@ -8,9 +8,12 @@
 <section id="interviews" class="interviews">
   <h3 class="interviews__header">Interviews</h3>
   <div class="interviews__body">
-    <div class="row">
-      <%= render partial: "interviews/item", collection: @interviews, as: :interview %>
-    </div>
+    <% rows = @interviews.in_groups_of(4) %>
+    <% rows.each do |row| %>
+      <div class="interviews__row">
+        <%= render partial: "interviews/item", collection: row.compact, as: :interview %>
+      </div>
+    <% end %>
   </div>
 </section>
 <section class="partners">

@@ -1,0 +1,22 @@
+
+.editions {
+  padding: 0 0 30px 0;
+  background-color: $color-2;
+
+  &__header {
+    @extend %header;
+  }
+
+  &__cover {
+    text-align: center;
+  }
+
+  &__cover-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__cover-caption {
+    font-weight: bold;
+  }
+}

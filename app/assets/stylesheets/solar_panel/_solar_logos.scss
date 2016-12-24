@@ -1,0 +1,10 @@
+
+.solar-logos {
+  &__header {
+    @extend %header;
+  }
+
+  &__body {
+    padding: 90px 0 60px 0;
+  }
+}

@@ -1,51 +1,30 @@
 <section class="magazines">
-  <h3 class="header">Subscribe Now</h3>
-  <div class="body">
+  <h3 class="magazines__header">Subscribe Now</h3>
+  <div class="magazines__body">
     <div class="row">
-      <div class="col-sm-12 col-md-4">
-        <div class="buy-item text-center">
-          <div data-embed_type="product" data-shop="the-beam-magazine.myshopify.com" data-product_name="The individual: The Beam #2 - October 2016" data-product_handle="the-individual-the-beam-2-october-2016" data-has_image="true" data-display_size="compact" data-redirect_to="checkout" data-buy_button_text="Buy now" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="7fb466" data-button_text_color="ffffff" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>
-          <script type="text/javascript">
-          document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
-          </script>
-          <noscript><a href="https://the-beam-magazine.myshopify.com/cart/29592029511:1" target="_blank">Buy The individual: The Beam #2 - October 2016</a></noscript>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <div class="buy-item text-center">
-          <div data-embed_type="product" data-shop="the-beam-magazine.myshopify.com" data-product_name="The Café: 3 copies of The Beam #2" data-product_handle="the-cafe-3-copies-of-the-beam-2" data-has_image="true" data-display_size="compact" data-redirect_to="checkout" data-buy_button_text="Buy now" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="7fb466" data-button_text_color="ffffff" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>
-          <script type="text/javascript">
-          document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
-          </script>
-          <noscript><a href="https://the-beam-magazine.myshopify.com/cart/29591946311:1" target="_blank">Buy The Café: 3 copies of The Beam #2</a></noscript>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <div class="buy-item text-center">
-          <div data-embed_type="product" data-shop="the-beam-magazine.myshopify.com" data-product_name="The company: 5 copies of The Beam #2" data-product_handle="the-company-5-copies-of-the-beam-2" data-has_image="true" data-display_size="compact" data-redirect_to="checkout" data-buy_button_text="Buy now" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="7fb466" data-button_text_color="ffffff" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>
-          <script type="text/javascript">
-          document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
-          </script>
-          <noscript><a href="https://the-beam-magazine.myshopify.com/cart/29591793543:1" target="_blank">Buy The company: 5 copies of The Beam #2</a></noscript>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-4">
-      <div class="buy-item text-center">
-        <div data-embed_type="product" data-shop="the-beam-magazine.myshopify.com" data-product_name="The collector: The Beam #1 - April 2016" data-product_handle="the-collector-the-beam-1-april-2016" data-has_image="true" data-display_size="compact" data-redirect_to="checkout" data-buy_button_text="Buy now" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="7fb466" data-button_text_color="ffffff" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>
-        <script type="text/javascript">
-        document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
-        </script>
-        <noscript><a href="https://the-beam-magazine.myshopify.com/cart/29591627079:1" target="_blank">Buy The collector: The Beam #1 - April 2016</a></noscript>
+      <div class="col-xs-12">
+        <%= link_to "https://the-beam-magazine.myshopify.com/products/subscribe-now", class: 'magazines__wrapper', target: "_blank" do %>
+          <div class="magazines__image-wr">
+            <%= image_tag "buy/image.png", alt: "#buildthebeam", class: "magazines__image" %>
+          </div>
+          <p class="magazines__txt">
+            Don't let the energy transition leave you behind.
+          </p>
+          <p class="magazines__txt magazines__txt--n">
+            Build The Beam with us
+            for only 20 euros.
+            <br>
+            #buildthebeam
+          </p>
+          <p class="magazines__txt magazines__txt--sub">Subscribe now</p>
+        <% end %>
       </div>
     </div>
   </div>
 </section>
-<section class="testimonial default-link">
-  <h3 class="header">What Our Readers Say</h3>
-  <div class="body">
+<section class="testimonial">
+  <h3 class="testimonial__header">What Our Readers Say</h3>
+  <div class="testimonial__body">
     <div class="row">
       <%= render partial: "testimonials/item", collection: @testimonials, as: :testimonial %>
     </div>

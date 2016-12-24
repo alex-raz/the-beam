@@ -1,0 +1,26 @@
+
+html,
+body {
+  height: 100%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -41px;
+
+  &::after {
+    display: block;
+    height: 41px;
+    content: "";
+  }
+}
+
+body {
+  color: $color-1;
+  font-family: 'Muli', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+a {
+  @include link-color($color-1);
+}

@@ -1,0 +1,71 @@
+
+.magazines {
+  background-color: $grey-color;
+
+  &__header {
+    @extend %header;
+  }
+
+  &__body {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  &__wrapper {
+    display: block;
+    text-align: center;
+
+    &,
+    &:hover,
+    &:active,
+    &:visited,
+    &:link {
+      text-decoration: none;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &__txt {
+    color: $pink-color;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  &__txt--n {
+    font-weight: normal;
+  }
+
+  &__txt--sub {
+    text-decoration: underline;
+  }
+}
+
+
+@media (max-width: $screen-md) {
+  .magazines {
+    &__table {
+      display: block;
+      padding-bottom: 35px;
+    }
+
+    &__txt {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+      padding-right: 20px;
+      padding-left: 20px;
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    &__image-wr {
+      display: block;
+      width: 100%;
+    }
+  }
+}

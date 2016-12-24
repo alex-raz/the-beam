@@ -1,0 +1,17 @@
+
+.contact {
+  &__body {
+    margin: 0;
+    padding: 70px 0;
+    font-weight: 100;
+    text-align: center;
+  }
+
+  &__header {
+    @extend %header;
+  }
+
+  &__link {
+    font-weight: bold;
+  }
+}

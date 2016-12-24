@@ -1,13 +1,13 @@
-<div class="col-xs-12 col-md-3 row-1">
-  <div class="thumbnail interview">
-    <%= image_tag interview.image_url(:cropped) %>
-    <div class="caption">
-      <div class="caption-l1">
-        <h4><%= interview.interviewee_full_name %></h4>
-        <p class="title"><%= interview.interviewee_synopsis %></p>
-        <p><%= interview.content_preview %></p>
+<div class="col-xs-12 col-md-3">
+  <div class="interview">
+    <%= image_tag interview.image_url(:cropped), class: "interview__img" %>
+    <div class="interview__inner">
+      <div class="interview__body">
+        <h4 class="interview__header"><%= interview.interviewee_full_name %></h4>
+        <p class="interview__synopsis"><%= interview.interviewee_synopsis %></p>
+        <p class="interview__preview"><%= interview.content_preview %></p>
       </div>
-      <%= link_to 'READ MORE', interview.read_more_link, target: "_blank" %>
+      <%= link_to 'READ MORE', interview.read_more_link, target: "_blank", class: "interview__readme" %>
     </div>
   </div>
 </div>

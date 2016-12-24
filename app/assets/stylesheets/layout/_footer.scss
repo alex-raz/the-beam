@@ -1,0 +1,14 @@
+
+.footer__body {
+  padding: 10px 0;
+  background-color: $color-1;
+  color: $footer-color;
+  font-weight: 100;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .footer__container {
+    padding: 0;
+  }
+}

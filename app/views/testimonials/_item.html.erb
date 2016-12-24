@@ -1,6 +1,8 @@
-<div class="col-xs-12 col-sm-6 item">
-  <blockquote>
+<div class="col-xs-12 col-sm-6 testimonial__item">
+  <blockquote class="testimonial__quote">
     <%= testimonial.content.html_safe %>
-    <cite><%= reader_cite(testimonial) %></cite>
+    <cite class="testimonial__cite">
+      <%= reader_cite(testimonial) %>
+    </cite>
   </blockquote>
 </div>

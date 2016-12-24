@@ -1,0 +1,62 @@
+
+.menu {
+  position: relative;
+  height: 166px;
+  text-align: center;
+  vertical-align: middle;
+
+  &__row {
+    height: 166px;
+    margin: 0;
+    padding: 50px 0;
+    vertical-align: middle;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 13%;
+    text-align: center;
+  }
+
+  &_item--logo {
+    width: 18%;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  &__social {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 991px) {
+  .menu {
+    position: relative;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+
+    &__row {
+      height: auto;
+      padding: 20px 0;
+      vertical-align: middle;
+    }
+
+    &__item {
+      display: block;
+      width: 100%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+  }
+}

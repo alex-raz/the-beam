@@ -8,6 +8,7 @@
   <%= favicon_link_tag 'favicon.png', type: 'image/png' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   <script>
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -16,34 +17,34 @@
    ga('create', 'UA-78504373-4', 'auto');
    ga('send', 'pageview');
   </script>
+
 </head>
-<body id="content" class="">
+<body>
   <div class="page-wrap">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
           <header>
-            <nav id="main-menu">
-              <ul class="inline">
-                <li><a href="/#about">About</a></li>
-                <li><%= link_to "Subscribe", buy_path %></li>
-                <li><a href="/#interviews">Interviews</a></li>
-                <li class="logo-place">
+            <nav class="menu">
+              <ul class="menu__row">
+                <li class="menu__item"><a href="/#about">About</a></li>
+                <li class="menu__item"><%= link_to "Subscribe", buy_path %></li>
+                <li class="menu__item"><a href="/#interviews">Interviews</a></li>
+                <li class="menu__item menu_item--logo">
                   <%= link_to root_path do %>
-                    <%= image_tag 'beam-logo.png', alt: 'The Beam' %>
+                    <%= image_tag 'beam-logo.png', alt: 'The Beam', class: 'menu__logo' %>
                   <% end %>
                 </li>
-                <li><a href="/#contact">Contact</a></li>
-                <li>
+                <li class="menu__item"><a href="/#contact">Contact</a></li>
+                <li class="menu__item">
+                  <%= link_to "Solarpanelart", solar_panel_art_path %>
+                </li>
+                <li class="menu__item">
                   <%= link_to "https://twitter.com/@TheBeamMagazine" do %>
-                    Twitter
-                    <%= image_tag 'twitter-grey.png', class: 'social-logo' %>
+                    <%= image_tag "twitter-grey.png", class: "menu__social" %>
                   <% end %>
-                </li>
-                <li>
                   <%= link_to "https://www.facebook.com/TheBeamMag" do %>
-                    Facebook
-                    <%= image_tag 'facebook-grey.png', class: 'social-logo' %>
+                    <%= image_tag "facebook-grey.png", class: "menu__social" %>
                   <% end %>
                 </li>
               </ul>
@@ -54,12 +55,12 @@
       </div>
     </div>
   </div>
-  <footer>
-    <div class="container">
+  <footer class="footer">
+    <div class="container footer__container">
       <div class="row">
         <div class="col-xs-12">
-          <div class="body">
-            <span>&copy; Copyright 2016 - The Beam by GridHub </span>
+          <div class="footer__body">
+            <span>&copy; Copyright 2016 - The Beam by GridHub</span>
           </div>
         </div>
       </div>

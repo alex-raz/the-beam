@@ -32,9 +32,9 @@ RSpec.describe PagesController, type: :controller do
       process :home, method: :get
 
       expect(response.body).to include(
-        "<img src=\"#{interview.image[:cropped].url}\"",
-        "<h4>#{interview.interviewee_full_name}</h4>",
-        "<p class=\"title\">#{interview.interviewee_synopsis}",
+        "<img class=\"interview__img\" src=\"#{interview.image[:cropped].url}\"",
+        "<h4 class=\"interview__header\">#{interview.interviewee_full_name}</h4>",
+        "<p class=\"interview__synopsis\">#{interview.interviewee_synopsis}",
         "href=\"#{interview.read_more_link}\">READ MORE"
       )
     end
@@ -48,7 +48,8 @@ RSpec.describe PagesController, type: :controller do
 
       expect(response.body).to include(
         testimonial.content,
-        "<cite><a href=\"#{testimonial.reader_link}\">#{testimonial.reader_full_name}</a></cite>"
+        "<cite class=\"testimonial__cite\">",
+        "<a href=\"#{testimonial.reader_link}\">#{testimonial.reader_full_name}</a>"
       )
     end
   end

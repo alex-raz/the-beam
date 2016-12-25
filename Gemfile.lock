@@ -314,6 +314,7 @@ PLATFORMS
 DEPENDENCIES
   administrate (~> 0.3.0)
   annotate
+  autoprefixer-rails
   awesome_print
   bourbon
   capistrano

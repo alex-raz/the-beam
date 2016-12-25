@@ -47,6 +47,10 @@ gem 'trix'
 # Devise is a flexible authentication solution for Rails based on Warden.
 gem 'devise'
 
+# Autoprefixer is a tool to parse CSS and add vendor prefixes to CSS rules
+# using values from the Can I Use.
+gem 'autoprefixer-rails'
+
 group :development do
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background.

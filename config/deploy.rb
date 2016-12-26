@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.7.0'
+lock '3.7.1'
 
 PROVISION_VARS = YAML.load_file('config/provision/group_vars/all')
 

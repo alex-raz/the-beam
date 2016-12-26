@@ -61,6 +61,7 @@ namespace :deploy do
   desc 'Backup uploads/'
   task :copy_uploads_dir do
     on roles(:app) do
+      next if ENV['env_file_path']
       next if ENV['no_backup']
       run_locally { execute 'rm -rf public/uploads' }
       download!("#{shared_path}/public/uploads/store", 'public/uploads', recursive: true)
@@ -73,4 +74,4 @@ namespace :deploy do
   before :migrate, :createdb
 end
 
-before 'deploy:starting', 'postgres:backup:download' unless ENV['no_backup']
+before 'deploy:starting', 'postgres:backup:download' unless ENV['no_backup'] or ENV['env_file_path']

@@ -74,4 +74,4 @@ namespace :deploy do
   before :migrate, :createdb
 end
 
-before 'deploy:starting', 'postgres:backup:download' unless ENV['no_backup'] or ENV['env_file_path']
+before 'deploy:starting', 'postgres:replicate' unless ENV['no_backup'] or ENV['env_file_path']
